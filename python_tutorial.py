@@ -151,4 +151,112 @@ print(random.randrange(1, 10))
 
 ##########################################
 # -------PYTHON STRINGS--------
+# surrounded by either single quotation marks, or double quotation marks.
+# can use quotes inside a string, as long as they don't match the quotes surrounding the string
+# multiline string 
+a = """Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua."""
+print(a)
+a = '''Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua.'''
+print(a)
+
+# strings in Python are arrays of unicode characters.
+# Python does not have a character data type. 
+# single character is simply a string with a length of 1.
+
+# --Accessing the strings --
+a = "Hello World!"
+print(a[1]) #prints 'e' because the indexing starts with 0
+
+# -- Looping through string 
+for x in "Hello World":
+  print(x)
+#prints each char of the string in each line
+
+# -- string length --
+print(len(a))
+
+# -- Check string --
+text = "My name is Reshmitha"
+print("name" in text) #prints TRUE
+print("age" in text) # prints FALSE
+print("age" not in text) # prints TRUE
+
+
+if "name" in text:
+  print("The world 'name' is present in the text")
+
+# -- Check if not
+if "age" not in text:
+  print("The word 'age' is not present in text")
+
+# -------PYTHON STRINGS - SLICING --------
+# Specify the start index and the end index, separated by a colon, to return a part of the string
+
+name = "Uppala Reshmitha"
+text = "in college people call me", name[7:16], "but my close friends call me", name[7:11] 
+# Here the python stores this string as tuple, because it is separated with commas
+mintext = "in college people call me Reshmitha"
+print(text)
+print("in college people call me", name[7:16], "but my close friends call me", name[7:11])
+print(mintext)
+text = f"in college people call me {name[7:16]} but my close friends call me {name[7:11]}"
+# This prints in string. 
+print(text)
+# [7:16] 16 is not included. 
+
+# -- Slice from start 
+print("Last name:", name[:6])
+
+# -- Slice to the End
+print("First name:", name[7:])
+
+# -- Negative Indexing
+print("Short name:", name[-10:-5]) # Starts from -1, but here -5 is not included.
+
+# -------PYTHON STRINGS - MODIFY STRINGS --------
+modifystring = "Modifications of strings "
+print(modifystring.upper()) # upper case
+print(modifystring.lower()) # lower case
+print(modifystring.strip()) # removes whitespaces before and/or after the string 
+print(modifystring.replace('M', 'C')) # Replaces a string with other string
+print(modifystring.split(" ")) # Split the string based on the given separator
+
+# -------PYTHON STRINGS - STRING CONCATENATION --------
+a = "Hello"
+b = "World"
+c = a + " " + b
+print(c)
+
+# -------PYTHON STRINGS - FORMAT STRINGS --------
+age = 23
+txt = f"My name is Reshmitha and I am {age}"
+print(txt)
+
+# -- Placeholder and modifier - we can add demin
+price = 19
+txt = f"The price of the item is {price:.2f} dollars" 
+print(txt)
+txt = f"The price of 2 items is {price*2:.2f} dollars"
+print(txt)
+
+# -- Escape Characters
+# An escape character is a backslash \ followed by the character you want to insert.
+print("We are so called \"Vikings\"")
+
+##########################################
+# -------PYTHON BOOLEANS --------
+# Booleans represent one of two values: True or False.
+# Any string is True, except empty strings.
+# Any number is True, except 0.
+# Any list, tuple, set, and dictionary are True, except empty ones.
+# The values that evaluate to False are empty values, such as (), [], {}, "", the number 0, and the value None. 
+# And of course the value False evaluates to False.
+
+
 
